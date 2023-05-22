@@ -1,0 +1,62 @@
+[
+  {
+    "display_time": "2019-04-18T09:29:00+03:00", 
+    "name": "GlucoseSensorData", 
+    "date_type": "relative", 
+    "_tell": 2, 
+    "dateString": "2019-04-18T09:29:00+03:00", 
+    "packet_size": 0, 
+    "date": 1555568940000, 
+    "op": 94, 
+    "device": "openaps://medtronic/pump/cgm", 
+    "sgv": 188, 
+    "type": "sgv", 
+    "glucose": 188
+  }, 
+  {
+    "display_time": "2019-04-18T09:24:00+03:00", 
+    "name": "GlucoseSensorData", 
+    "date_type": "relative", 
+    "_tell": 3, 
+    "dateString": "2019-04-18T09:24:00+03:00", 
+    "packet_size": 0, 
+    "date": 1555568640000, 
+    "op": 92, 
+    "device": "openaps://medtronic/pump/cgm", 
+    "sgv": 184, 
+    "type": "sgv", 
+    "glucose": 184
+  }, 
+  {
+    "trend_arrow": "45_UP", 
+    "direction": "FortyFiveUp", 
+    "name": "GlucoseSensorData", 
+    "date_type": "relative", 
+    "_tell": 437, 
+    "display_time": "2019-04-18T00:44:00+03:00", 
+    "packet_size": 0, 
+    "dateString": "2019-04-18T00:44:00+03:00", 
+    "date": 1555537440000, 
+    "op": 90, 
+    "device": "openaps://medtronic/pump/cgm", 
+    "sgv": 180, 
+    "type": "sgv", 
+    "glucose": 180
+  }, 
+  {
+    "body": "c3", 
+    "display_time": "2019-04-18T00:31:00+03:00", 
+    "date": 1555536660000, 
+    "name": "CalBGForGH", 
+    "date_type": "independent", 
+    "_tell": 462, 
+    "dateString": "2019-04-18T00:31:00+03:00", 
+    "packet_size": 5, 
+    "raw": "40-1f-12-13-c3", 
+    "op": "0x0e", 
+    "device": "openaps://medtronic/pump/cgm", 
+    "sgv": 195, 
+    "type": "pumpdata", 
+    "glucose": 195
+  }
+]

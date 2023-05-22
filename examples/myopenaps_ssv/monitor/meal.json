@@ -1,0 +1,21 @@
+{
+  "carbs": 7,
+  "nsCarbs": 7,
+  "bwCarbs": 0,
+  "journalCarbs": 0,
+  "mealCOB": 2,
+  "currentDeviation": 2,
+  "maxDeviation": 9.29,
+  "minDeviation": 6.79,
+  "slopeFromMaxDeviation": -1.717,
+  "slopeFromMinDeviation": 0,
+  "allDeviations": [
+    7,
+    7,
+    8,
+    9,
+    9
+  ],
+  "lastCarbTime": 1555566835018,
+  "bwFound": false
+}

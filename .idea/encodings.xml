@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/oref0/node_modules/extend/component.json" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/oref0/node_modules/qs/component.json" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/oref0/node_modules/share2nightscout-bridge/node_modules/extend/component.json" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/oref0/node_modules/share2nightscout-bridge/node_modules/qs/.eslintignore" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/test_twig.php" charset="windows-1251" />
+    <file url="PROJECT" charset="windows-1251" />
+  </component>
+</project>

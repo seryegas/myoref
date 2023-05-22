@@ -1,0 +1,13 @@
+{
+  "units": "mmol/L", 
+  "sensitivities": [
+    {
+      "i": 0, 
+      "start": "00:00:00", 
+      "sensitivity": 5.5, 
+      "offset": 0, 
+      "x": 0
+    }
+  ], 
+  "first": 2
+}

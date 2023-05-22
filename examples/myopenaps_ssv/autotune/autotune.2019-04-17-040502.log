@@ -1,0 +1,30 @@
+Compressing old json and log files to save space...
+Autotune disk usage:
+13M	.
+Overall disk used/avail:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       1.4G  859M  458M  66% /
+Grabbing NIGHTSCOUT treatments.json and entries/sgv.json for date range...
+Query: https://sweta108.herokuapp.com find%5Bdate%5D%5B%24gte%5D=1555376400000&find%5Bdate%5D%5B%24lte%5D=1555462800000&count=1000
+-rw-r--r-- 1 root root 0 Apr 17 04:05 ns-entries.2019-04-16.json
+Query: https://sweta108.herokuapp.com/find%5Bcreated_at%5D%5B%24gte%5D=2019-04-15T06:00+0300&find%5Bcreated_at%5D%5B%24lte%5D=2019-04-17T18:00+0300
+-rw-r--r-- 1 root root 0 Apr 17 04:05 ns-treatments.2019-04-16.json
+oref0-autotune-prep ns-treatments.2019-04-16.json profile.json ns-entries.2019-04-16.json profile.pump.json  > autotune.2019-04-16.json
+Could not parse input data:  [SyntaxError: Unexpected end of input]
+oref0-autotune-core autotune.2019-04-16.json profile.json profile.pump.json > newprofile.2019-04-16.json
+
+/home/.rootfs/usr/local/lib/node_modules/oref0/lib/autotune/index.js:48
+    CRData.forEach(function(CRDatum) {
+           ^
+TypeError: Cannot call method 'forEach' of undefined
+    at tuneAllTheThings (/home/.rootfs/usr/local/lib/node_modules/oref0/lib/autotune/index.js:48:12)
+    at Object.<anonymous> (/home/.rootfs/usr/local/lib/node_modules/oref0/bin/oref0-autotune-core.js:60:27)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:906:3
+false
+Could not run oref0-autotune-core autotune.2019-04-16.json profile.json profile.pump.json

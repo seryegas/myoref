@@ -1,0 +1,260 @@
+{
+   "A52_risk_enable": false,
+   "adv_target_adjustments": false,
+   "allowSMB_with_high_temptarget": false,
+   "autosens_max": 1.2,
+   "autosens_min": 0.7,
+   "autotune_isf_adjustmentFraction": 1,
+   "basalprofile": [
+      {
+         "i": 0,
+         "minutes": 0,
+         "rate": 0.373,
+         "start": "00:00:00"
+      },
+      {
+         "i": 1,
+         "minutes": 60,
+         "rate": 0.381,
+         "start": "01:00:00"
+      },
+      {
+         "i": 2,
+         "minutes": 120,
+         "rate": 0.366,
+         "start": "02:00:00"
+      },
+      {
+         "i": 3,
+         "minutes": 180,
+         "rate": 0.358,
+         "start": "03:00:00"
+      },
+      {
+         "i": 4,
+         "minutes": 240,
+         "rate": 0.357,
+         "start": "04:00:00"
+      },
+      {
+         "i": 5,
+         "minutes": 300,
+         "rate": 0.355,
+         "start": "05:00:00"
+      },
+      {
+         "i": 6,
+         "minutes": 360,
+         "rate": 0.349,
+         "start": "06:00:00"
+      },
+      {
+         "i": 7,
+         "minutes": 420,
+         "rate": 0.329,
+         "start": "07:00:00"
+      },
+      {
+         "i": 8,
+         "minutes": 480,
+         "rate": 0.318,
+         "start": "08:00:00"
+      },
+      {
+         "i": 9,
+         "minutes": 540,
+         "rate": 0.309,
+         "start": "09:00:00"
+      },
+      {
+         "i": 10,
+         "minutes": 600,
+         "rate": 0.309,
+         "start": "10:00:00"
+      },
+      {
+         "i": 11,
+         "minutes": 660,
+         "rate": 0.309,
+         "start": "11:00:00"
+      },
+      {
+         "i": 12,
+         "minutes": 720,
+         "rate": 0.326,
+         "start": "12:00:00"
+      },
+      {
+         "i": 13,
+         "minutes": 780,
+         "rate": 0.325,
+         "start": "13:00:00"
+      },
+      {
+         "i": 14,
+         "minutes": 840,
+         "rate": 0.319,
+         "start": "14:00:00"
+      },
+      {
+         "i": 15,
+         "minutes": 900,
+         "rate": 0.318,
+         "start": "15:00:00"
+      },
+      {
+         "i": 16,
+         "minutes": 960,
+         "rate": 0.32,
+         "start": "16:00:00"
+      },
+      {
+         "i": 17,
+         "minutes": 1020,
+         "rate": 0.33,
+         "start": "17:00:00"
+      },
+      {
+         "i": 18,
+         "minutes": 1080,
+         "rate": 0.327,
+         "start": "18:00:00"
+      },
+      {
+         "i": 19,
+         "minutes": 1140,
+         "rate": 0.327,
+         "start": "19:00:00"
+      },
+      {
+         "i": 20,
+         "minutes": 1200,
+         "rate": 0.329,
+         "start": "20:00:00"
+      },
+      {
+         "i": 21,
+         "minutes": 1260,
+         "rate": 0.331,
+         "start": "21:00:00"
+      },
+      {
+         "i": 22,
+         "minutes": 1320,
+         "rate": 0.332,
+         "start": "22:00:00"
+      },
+      {
+         "i": 23,
+         "minutes": 1380,
+         "rate": 0.346,
+         "start": "23:00:00"
+      }
+   ],
+   "bg_targets": {
+      "first": 2,
+      "targets": [
+         {
+            "high": 135,
+            "i": 0,
+            "low": 135,
+            "max_bg": 135,
+            "min_bg": 135,
+            "offset": 0,
+            "start": "00:00:00",
+            "x": 0
+         }
+      ],
+      "units": "mg/dL",
+      "user_preferred_units": "mmol/L"
+   },
+   "bolussnooze_dia_divisor": 2,
+   "carb_ratio": 10.67,
+   "carb_ratios": {
+      "first": 1,
+      "raw": "0x01 0x00 0x0f 0x0c 0x0c 0x26 0x0f 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00",
+      "schedule": [
+         {
+            "i": 0,
+            "offset": 0,
+            "r": 15,
+            "ratio": 15,
+            "start": "00:00:00",
+            "x": 0
+         },
+         {
+            "i": 12,
+            "offset": 360,
+            "r": 12,
+            "ratio": 12,
+            "start": "06:00:00",
+            "x": 1
+         },
+         {
+            "i": 38,
+            "offset": 1140,
+            "r": 15,
+            "ratio": 15,
+            "start": "19:00:00",
+            "x": 2
+         }
+      ],
+      "units": "grams"
+   },
+   "carbsReqThreshold": 1,
+   "csf": 8.064,
+   "current_basal": 0.35,
+   "current_basal_safety_multiplier": 6,
+   "curve": "rapid-acting",
+   "dia": 5,
+   "enableSMB_after_carbs": true,
+   "enableSMB_always": true,
+   "enableSMB_with_COB": true,
+   "enableSMB_with_temptarget": true,
+   "enableUAM": true,
+   "exercise_mode": false,
+   "half_basal_exercise_target": 160,
+   "high_temptarget_raises_sensitivity": false,
+   "insulinPeakTime": 75,
+   "isfProfile": {
+      "first": 2,
+      "sensitivities": [
+         {
+            "endOffset": 1440,
+            "i": 0,
+            "offset": 0,
+            "sensitivity": 90.235,
+            "start": "00:00:00",
+            "x": 0
+         }
+      ],
+      "units": "mg/dL",
+      "user_preferred_units": "mmol/L"
+   },
+   "low_temptarget_lowers_sensitivity": false,
+   "maxCOB": 240,
+   "maxSMBBasalMinutes": 45,
+   "maxUAMSMBBasalMinutes": 30,
+   "max_basal": 5,
+   "max_bg": 135,
+   "max_daily_basal": 0.4,
+   "max_daily_safety_multiplier": 6,
+   "max_iob": 8,
+   "min_5m_carbimpact": 8,
+   "min_bg": 135,
+   "model": "722",
+   "noisyCGMTargetMultiplier": 1.3,
+   "offline_hotspot": false,
+   "out_units": "mmol/L",
+   "remainingCarbsCap": 120,
+   "remainingCarbsFraction": 1,
+   "resistance_lowers_target": false,
+   "rewind_resets_autosens": true,
+   "sens": 90.235,
+   "sensitivity_raises_target": true,
+   "skip_neutral_temps": false,
+   "suspend_zeros_iob": true,
+   "unsuspend_if_no_temp": false,
+   "useCustomPeakTime": false,
+   "wide_bg_target_range": false
+}

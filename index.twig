@@ -1,0 +1,42 @@
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+<h1>Сумма интегральная: {{ integralSumm|raw }}</h1>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+    const bolusesData = ({{ boluses|json_encode|raw }})
+    const keys = Object.keys(bolusesData);
+    const anotherData = ({{ anotherData|json_encode|raw }})
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: keys,
+            datasets: [{
+                label: 'алгоритм из статьи',
+                data: bolusesData,
+                borderWidth: 1,
+                tension: 0.1
+            },
+            {
+                label: 'oref0',
+                data: anotherData,
+                borderWidth: 1,
+                tension: 0.1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        },
+        config: {
+            type: 'line',
+            data: 'kkkkkk',
+        }
+    });
+</script>

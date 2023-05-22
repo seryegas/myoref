@@ -1,0 +1,5 @@
+Для determine basal
+node ../bin/oref0-determine-basal.js iob.json temp_basal.json glucose.json profile.json --meal meal.json --currentTime "2019-04-18T09:30:00+03:00" > suggested111.json
+
+Для meal
+../bin/oref0-meal.js pumphistory.json profile.json clock.json glucose.json basal_profile.json carbhistory.json

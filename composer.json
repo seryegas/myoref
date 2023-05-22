@@ -1,0 +1,18 @@
+{
+    "name": "homec/oref-better-than-previous-one",
+    "description": "oref0 maths implementation",
+    "autoload": {
+        "psr-4": {
+            "Homec\\OrefBetterThanPreviousOne\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergey.Shakirov",
+            "email": "Sergey.Shakirov@tatar.ru"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.6"
+    }
+}
