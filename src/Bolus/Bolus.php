@@ -19,14 +19,16 @@ class Bolus
     /**
      * @throws \JsonException
      */
-    public function calculateBolus($expectedCarbs): float
+    public function calculateBolus($expectedCarbs, $cr, $isf): float
     {
-        $carbsOnBoard = (new CarbsOnBoard())->getCarbsOnBoard();
+        $carbsOnBoard = (new CarbsOnBoard())->getCarbsOnBoard($cr, $isf);
         $insulinOnBoard = (new InsulinOnBoard())->getInsulinOnBoard();
 
-        $bolus =  $expectedCarbs / ProfileEnum::CR +
-            $this->helper->calculateDifferenceBetweenCurrentAndExpectedGlycemia() / ProfileEnum::ISF
-            + $carbsOnBoard / ProfileEnum::CR - $insulinOnBoard;
+        //var_dump($expectedCarbs, $this->helper->calculateDifferenceBetweenCurrentAndExpectedGlycemia(), $carbsOnBoard, $insulinOnBoard);die;
+
+        $bolus =  $expectedCarbs / $cr +
+            $this->helper->calculateDifferenceBetweenCurrentAndExpectedGlycemia() / $isf
+            + $carbsOnBoard / $cr - $insulinOnBoard;
 
         return $bolus;
     }

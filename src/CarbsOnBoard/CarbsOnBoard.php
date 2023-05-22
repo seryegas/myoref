@@ -16,7 +16,7 @@ class CarbsOnBoard
         $this->glucose = $this->helper->getGlucoseData();
     }
 
-    public function calculateCarbsOnBoard(): void
+    public function calculateCarbsOnBoard($cr, $isf): void
     {
         $carbsFromMeals = 0;
         $carbsAbsorbedTotal = 0;
@@ -34,26 +34,26 @@ class CarbsOnBoard
         }
 
         for ($i = 0, $iMax = count($this->glucose); $i < $iMax - 1; $i++) {
-            $carbsAbsorbedTotal += $this->getCarbsAbsorbed($this->glucose[$i], $this->glucose[$i + 1]);
+            $carbsAbsorbedTotal += $this->getCarbsAbsorbed($this->glucose[$i], $this->glucose[$i + 1], $cr, $isf);
         }
 
         $this->carbsOnBoard = $carbsFromMeals - $carbsAbsorbedTotal;
     }
 
-    public function getCarbsOnBoard(): float
+    public function getCarbsOnBoard($cr, $isf): float
     {
-        $this->calculateCarbsOnBoard();
+        $this->calculateCarbsOnBoard($cr, $isf);
         return $this->carbsOnBoard;
     }
 
-    private function getCarbsAbsorbed($record, $fiveMinutesBeforeRecord): float
+    private function getCarbsAbsorbed($record, $fiveMinutesBeforeRecord, $cr, $isf): float
     {
-        return $this->calculateDifferenceBetweenRealAndExpectedInsulinImpact($record, $fiveMinutesBeforeRecord)
-            * ProfileEnum::CR / ProfileEnum::ISF;
+        return $this->calculateDifferenceBetweenRealAndExpectedInsulinImpact($record, $fiveMinutesBeforeRecord, $isf)
+            * $cr / $isf;
     }
-    private function calculateDifferenceBetweenRealAndExpectedInsulinImpact($first, $second): float
+    private function calculateDifferenceBetweenRealAndExpectedInsulinImpact($first, $second, $isf): float
     {
-        return $first["glucose"] - $second["glucose"] - $this->helper->getInsulinOnBoardActivity(strtotime($first["dateString"]) + 3 * 60 * 60) * ProfileEnum::ISF * 5;
+        return $first["glucose"] - $second["glucose"] - $this->helper->getInsulinOnBoardActivity(strtotime($first["dateString"]) + 3 * 60 * 60) * $isf * 5;
     }
 
     private function getGlycemiaChange(): float

@@ -26,7 +26,7 @@ class InsulinOnBoard
         //$this->insulinOnBoard = $this->calculateInsulinOnBoardBolus($boluses, $t) + $this->calculateInsulinOnBoardBasal($basals ,$t);
     }
 
-    public function getInsulinOnBoard(): int
+    public function getInsulinOnBoard(): float
     {
         return $this->calculateInsulinOnBoardBolus() + $this->calculateInsulinOnBoardBasal();
     }
