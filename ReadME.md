@@ -1,1 +1,19 @@
-файл с логами для отношения  углеводов к инсулину
+git clone https://github.com/seryegas/myoref.git
+cd myoref
+
+
+sudo apt-get update
+sudo apt -y install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt-get update
+sudo apt -y install php7.4
+
+РџСЂРѕРІРµСЂРёС‚СЊ РІРµСЂСЃРёСЋ php
+php -v
+
+Р”Р°Р»РµРµ Р·Р°РїСѓСЃС‚РёС‚СЊ Р»РѕРєР°Р»СЊРЅС‹Р№ web-server:
+
+php -S localhost:8000
+
+РћС‚РєСЂС‹С‚СЊ РІ Р±СЂР°СѓР·РµСЂРµ СЃР»РµРґСѓСЋС‰РёР№ Р°РґСЂРµСЃ: localhost:8000/index.php
