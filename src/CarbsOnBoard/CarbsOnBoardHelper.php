@@ -16,8 +16,8 @@ class CarbsOnBoardHelper
      */
     public function getGlycemiaDelta(): float
     {
-        $data = file_get_contents(ProfileEnum::PATH . '../../examples/clock.json');
-        $autotuneData = file_get_contents(ProfileEnum::PATH . '../../examples/autotune.json');
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/clock.json');
+        $autotuneData = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/autotune.json');
         $currentTime = json_decode($data, true, 512, JSON_THROW_ON_ERROR)['currentTime'];
         $autotuneDataInPHPForm = json_decode($autotuneData,true, 512, JSON_THROW_ON_ERROR);
 
@@ -51,7 +51,7 @@ class CarbsOnBoardHelper
      */
     public function getCarbs(): array
     {
-        $data = file_get_contents(ProfileEnum::PATH . '../../examples/dev-bi/carbhistory.json');
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/dev-bi/carbhistory.json');
         return json_decode($data, true, 512, JSON_THROW_ON_ERROR);
     }
 
@@ -75,7 +75,7 @@ class CarbsOnBoardHelper
 
     public function getBolusesFromCarbHistory($timestamp): array
     {
-        $data = file_get_contents(ProfileEnum::PATH . '../../examples/dev-bi/carbhistory.json');
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/dev-bi/carbhistory.json');
         $phpArray =  json_decode($data, true, 512, JSON_THROW_ON_ERROR);
         $carbHistoryBoluses = [];
 
@@ -133,7 +133,7 @@ class CarbsOnBoardHelper
 
     public function getGlucoseData(): array
     {
-        $data = file_get_contents(ProfileEnum::PATH . '../../examples/dev-bi/glucose.json');
+        $data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/dev-bi/glucose.json');
         return json_decode($data, true, 512, JSON_THROW_ON_ERROR);
     }
 }

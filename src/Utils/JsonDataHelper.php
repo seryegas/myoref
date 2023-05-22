@@ -20,7 +20,7 @@ class JsonDataHelper
      */
     public function getBoluses(): array
     {
-        $pumpHistoryData = file_get_contents(ProfileEnum::PATH . '../../examples/myopenaps_ssv/settings/pumphistory-24h-zoned.json');
+        $pumpHistoryData = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/myopenaps_ssv/settings/pumphistory-24h-zoned.json');
         $allData = json_decode($pumpHistoryData, true, 512, JSON_THROW_ON_ERROR);
 
         $boluses = [];
@@ -40,7 +40,7 @@ class JsonDataHelper
      */
     public function getBasalsWithDuration(): array
     {
-        $pumpHistoryData = file_get_contents(ProfileEnum::PATH . '../../examples/dev-bi/pumphistory.json');
+        $pumpHistoryData = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/dev-bi/pumphistory.json');
         $allData = json_decode($pumpHistoryData, true, 512, JSON_THROW_ON_ERROR);
 
         $basales = [];
@@ -76,7 +76,7 @@ class JsonDataHelper
 
     public function getLastBolusTime($currentTime)
     {
-        $pumpHistoryData = file_get_contents(ProfileEnum::PATH . '../../examples/dev-bi/pumphistory.json');
+        $pumpHistoryData = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/examples/dev-bi/pumphistory.json');
         $allData = json_decode($pumpHistoryData, true, 512, JSON_THROW_ON_ERROR);
 
         foreach ($allData as $record) {
